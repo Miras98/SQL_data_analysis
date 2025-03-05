@@ -4,6 +4,11 @@
 This document contains a series of **SQL queries** designed to perform **Exploratory Data Analysis (EDA)** after creating the data warehouse. 
 The goal of this analysis is to extract key **metrics, KPIs, and general insights** about the dataset before diving into deeper analytics or dashboard creation.  
 
+## Dataset
+**fact_Sales**: include data regaring the sales amount, price ,orders, product_key, customer_key.
+**dim_customers** : contains customers demographics and geographics data.
+** dim_products** : include category, product_name, quantity
+
 ## **Objectives of EDA**  
 - Understand the **structure and quality** of the data.    
 - Compute **summary statistics** such as total records, unique values, and distributions.  
@@ -58,9 +63,9 @@ SELECT
 FROM gold.dim_customers;
 ```
 ```sql
-=====================================================================================================================
+===================================================================================
 --Explore Measures in the fact table
-=====================================================================================================================
+===================================================================================
 ```
 6- Find the total sales:
 ```sql
@@ -105,9 +110,9 @@ SELECT
 FROM gold.fact_sales;
 ```
 ```sql
-==================================================================================================================
+==============================================================================
 -- Generate a report that shows all key metrices of the business
-==================================================================================================================
+==============================================================================
 ```
 ```sql
 SELECT 'Total Sales' AS measure_name, 
@@ -124,9 +129,9 @@ UNION ALL
 SELECT 'Total Nr. Orders' , COUNT(DISTINCT order_number) FROM gold.fact_sales
 ```
 ```sql
-==================================================================================================================
+==========================================================================
 --Generate a magnitude analysis
-==================================================================================================================
+==========================================================================
 ```
 
 1- Find total customers by countries: 
