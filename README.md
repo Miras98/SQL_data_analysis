@@ -5,9 +5,9 @@ This document contains a series of **SQL queries** designed to perform **Explora
 The goal of this analysis is to extract key **metrics, KPIs, and general insights** about the dataset before diving into deeper analytics or dashboard creation.  
 
 ## Dataset
-- **fact_Sales**: include data regaring the sales amount, price ,orders, product_key, customer_key.
-- **dim_customers** : contains customers demographics and geographics data.
-- **dim_products** : include category, product_name, quantity.
+- **gold.fact_Sales**: include data regaring the sales amount, price ,orders, product_key, customer_key.
+- **gold.dim_customers** : contains customers demographics and geographics data.
+- **gold.dim_products** : include category, subcategory,product_name.
 
 ## **Objectives of EDA**  
 - Understand the **structure and quality** of the data.    
